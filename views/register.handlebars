@@ -1,0 +1,59 @@
+<div id="container">
+  <div id="location-list"></div>
+  <div id="map"></div>
+</div>
+<script>
+  let map;
+  function initMap() {
+    let toronto = { lat: 43.70011, lng: -79.4163 };
+    map = new google.maps.Map(document.getElementById("map"), {
+      center: toronto,
+      zoom: 10
+    });
+  }
+
+  function addMarker(location) {
+    let marker = new google.maps.Marker({
+      position: location.coordinate,
+      map: map
+    });
+    let infoWindow = new google.maps.InfoWindow({
+      content: `<h1>${location.name}</h1><h2>${location.address}</h2>`
+    });
+    google.maps.event.addListener(marker, "click", function () {
+      infoWindow.open(map, marker);
+    });
+  }
+
+  function addLocationItem(location) {
+    let locationList = document.getElementById('location-list');
+    let locationItem = document.createElement('div');
+    let locationName = document.createElement('p');
+    let locationAddress = document.createElement('p');
+    let a = document.createElement('a');
+    locationName.innerText = `${location.name}`;
+    locationAddress.innerHTML = `${location.address}<br>${location.city}, ${location.province} ${location.postalCode}`;
+    a = createGoogleMapAnchor(location);
+    locationItem.appendChild(locationName);
+    locationItem.appendChild(locationAddress);
+    locationItem.appendChild(a);
+    locationList.appendChild(locationItem);
+  }
+
+  function createGoogleMapAnchor(location) {
+    let a = document.createElement('a');
+    let url = `https://www.google.com/maps/place/${location.address}, ${location.city}, ${location.province} ${location.postalCode}`;
+    url = encodeURI(url);
+    a.href = url;
+    a.innerText = "Check on map";
+    return a;
+  }
+
+  window.onload = () => {
+    window.locations.forEach(location => {
+      addMarker(location);
+      addLocationItem(location);
+    });
+  }
+</script>
+

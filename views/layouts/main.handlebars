@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" alt="Welcome to FHT's website made by Viettekkies">
+  <meta name="author" content="Tuan Phong Nguyen">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="{{cssFile}}">
+  <script src="https://kit.fontawesome.com/22ac762fe5.js" crossorigin="anonymous"></script>
+  {{#if isMapPage}}
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+  {{/if}}
+</head>
+
+<body>
+  <header class="header">
+    <a href="/">
+      <div class="title">
+        <img src="/images/logo.png" alt="logo.png" class="icon logo">
+        <p>Welcome to <span class="emphasis">Food Handler Test Center</span>
+        </p>
+      </div>
+      <nav>
+        <ul class="nav">
+          <li><a href="/">Home</a></li>
+          <li><a href="/test">Test</a></li>
+          <li><a href="/register">Locations</a></li>
+          <li><a href="/contact">Contact Us</a></li>
+        </ul>
+      </nav>
+    </a>
+  </header>
+
+  <main>
+    {{{body}}}
+  </main>
+
+  <footer>
+    <p>Viettekkies©2020
+      <br>
+      <span id="contribution">Icons made by <a href="https://www.flaticon.com/authors/vectors-market"
+          title="Vectors Market">Vectors
+          Market</a>, <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>, <a
+          href="https://www.flaticon.com/authors/eucalyp" title="Eucalyp">Eucalyp</a> from <a
+          href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+      </span>
+    </p>
+  </footer>
+  {{#if isTestPage}}
+  <script src="/scripts/script.js"></script>
+  {{/if}}
+  {{#if isMapPage}}
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgfu4hD9tmnUd70puUqWWPCFfIz7GaLcM&callback=initMap"
+    async defer></script>
+  <script src="/scripts/locations-data.js"></script>
+  {{/if}}
+</body>
+
+</html>

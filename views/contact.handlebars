@@ -1,0 +1,90 @@
+<form id="user-info-form" name="userform" action="https://httpbin.org/post" method="POST">
+  <h1 class="form-title" style="color: #6B9CDB;">Contact Us</h1>
+  <p style="margin-bottom: 20px;">
+    Please fill this form below. All fields are required
+  </p>
+  <div class="name">
+    <div class="user-firstname-div">
+      <label for="user-firstname">First name:</label>
+      <input id="user-firstname" name="firstname" type="text" tabindex="0" placeholder="First Name..." autofocus
+        required />
+    </div>
+    <div class="user-lastname-div">
+      <label for="user-lastname">Last name:</label>
+      <input id="user-lastname" name="lastname" type="text" tabindex="0" placeholder="Last Name..." required />
+    </div>
+  </div>
+  <div class="user-email">
+    <label for="user-email">Email:</label>
+    <input id="user-email" name="email" autocomplete="email" type="email" tabindex="0" placeholder="someone@example.com"
+      maxlength="1024" required />
+  </div>
+  <div class="address-postal">
+    <div class="user-address-div">
+      <label for="user-address">Address:</label>
+      <input id="user-address" name="address" type="text" tabindex="0" placeholder="Address..." maxlength="1024"
+        required />
+    </div>
+    <div class="user-postal-div">
+      <label for="user-postal">Postcode:</label>
+      <input id="user-postal" name="postalcode" type="text" tabindex="0" autocomplete="postal-code"
+        placeholder="A1B-2C3" maxlength="7" pattern="[a-zA-Z][0-9][[a-zA-Z] ?[0-9][a-zA-Z][0-9]" required />
+    </div>
+  </div>
+  <div class="city-province">
+    <div class="user-city-div">
+      <label for="user-city">City:</label>
+      <input id="user-city" class="contact-city" type="text" list="contact-city" name="city" placeholder="City..."
+        tabindex="0" required />
+      <datalist id="contact-city">
+        <option value="Toronto"> </option>
+        <option value="Montreal"> </option>
+        <option value="Ottawa"> </option>
+        <option value="Quebec City"> </option>
+        <option value="Vancouver"> </option>
+        <option value="Calgary"> </option>
+        <option value="Edmonton"> </option>
+      </datalist>
+    </div>
+    <div class="user-province-div">
+      <label for="user-province">Province:</label>
+      <input id="user-province" class="contact-province" type="text" list="contact-province" name="province"
+        placeholder="Province..." tabindex="0" required />
+      <datalist id="contact-province">
+        <option value="ON"></option>
+        <option value="QC"></option>
+        <option value="NS"></option>
+        <option value="NB"></option>
+        <option value="MB"></option>
+        <option value="BC"></option>
+        <option value="PE"></option>
+        <option value="SK"></option>
+        <option value="AB"></option>
+        <option value="NL"></option>
+      </datalist>
+    </div>
+  </div>
+  <div class="user-phone">
+    <label for="user-phone">Telephone</label>
+    <input id="user-phone" name="phone" autocomplete="tel" type="tel" tabindex="0" placeholder="Phone Number..."
+      pattern="\(?[2-9][0-9]{2}\)?( |-)?[0-9]{3}( |-)?[0-9]{4}" required />
+  </div>
+  <div class="question-phone">
+    <label for="question-phone" style="margin-right: 15px;">Would you like us to call you? If yes, please
+      check.</label>
+    <input id="question-phone" name="question-phone" type="checkbox" value="1" tabindex="0" />
+  </div>
+  <div class="textarea">
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="10" tabindex="0" placeholder="Please type your message here?"
+      required></textarea>
+  </div>
+  <div class="buttons">
+    <input type="submit" name="Submit" value="Submit" tabindex="0" />
+    <input type="reset" name="Reset" value="Reset" tabindex="0" />
+  </div>
+  <div class="hidden">
+    <input type="hidden" name="student-name" value="Khoi Nguyen Vu (Tony)" />
+    <input type="hidden" name="student-number" value="126915164" />
+  </div>
+</form>

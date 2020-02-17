@@ -1,0 +1,234 @@
+
+    /* CSS */
+   
+
+    ul.nav {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+      border-radius: 5px;
+
+      background-color: var(--main-color);
+    }
+
+    ul.nav li {
+      padding: .4rem;
+      color: #fff;
+      font-weight: bold;
+      font-size: 1.6rem;
+      display: inline-block;
+      flex: 1;
+      justify-content: space-around;
+      text-align: center;
+    }
+
+    .icon {
+      width: 100px;
+      height: 100px;
+    }
+
+    header {
+      margin-bottom: 2rem;
+    }
+
+    .title {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .title>p {
+      font-size: 2rem;
+      display: flex;
+      flex-direction: column;
+      margin-left: 1rem;
+    }
+
+    .emphasis {
+      font-weight: bold;
+      color: var(--main-color);
+    }
+
+    .title .emphasis {
+      font-size: 3rem;
+    }
+
+    a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    a:visited {
+      color: black;
+    }
+
+    li a {
+      color: #fff;
+    }
+
+    li a:visited {
+      color: #fff
+    }
+
+    nav li:hover {
+      background-color: var(--sub-violet);
+    }
+
+    :root {
+      /* for rem unit */
+      font-size: 1em;
+      /* Declaring custom properties */
+      --main-color: #83d0f2;
+      --sub-violet: #7A90F9;
+      --sub-blue: #6B9CDB;
+      --sub-green: #6BD7DB;
+      --sub-aquamarine: #7AF9DA;
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.6;
+    }
+
+    /* End */
+/** Add any CSS you need to this file. */
+html,
+body {
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+main {
+  min-height: calc(100vh - 151px - 235px);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+form label {
+  display: block;
+}
+
+/*Contact Form CSS*/
+
+#user-info-form * {
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+
+#user-info-form {
+  width: 400px;
+  margin: auto;
+  white-space: nowrap;
+  min-height: calc(100vh - 215px - 235px);
+  margin-bottom: 20px;
+}
+#user-info-form div {
+  margin: 5px 0;
+}
+
+#user-info-form input,
+#user-info-form textarea {
+  padding: 5px;
+  font-size: 1.2em;
+  border: 1px solid var(--sub-violet);
+  border-radius: 5px;
+}
+
+.name {
+  display: table-row;
+  flex-direction: row;
+}
+
+.user-firstname-div,
+.user-lastname-div,
+.user-address-div,
+.user-postal-div,
+.user-city-div,
+.user-province-div {
+  display: table-cell;
+}
+.user-lastname-div,
+.user-postal-div,
+.user-province-div {
+  padding-left: 5px;
+}
+
+#user-firstname,
+#user-lastname,
+.contact-city,
+.contact-province,
+.buttons input[type="submit"],
+.buttons input[type="reset"] {
+  width: 197.7px;
+}
+
+#user-email,
+#user-phone {
+  width: 400px;
+}
+#user-address {
+  width: 295.6px;
+}
+
+#user-postal {
+  width: 100px;
+}
+
+#user-info-form textarea {
+  width: 400px;
+}
+
+#user-info-form input[type="submit"] {
+  background-color: #1b1919;
+  color: white;
+}
+
+#user-info-form input[type="submit"]:hover {
+  background-color: rgb(80, 80, 80);
+  cursor: pointer;
+}
+
+#user-info-form input[type="reset"] {
+  background-color: rgb(172, 2, 2);
+  color: white;
+}
+
+#user-info-form input[type="reset"]:hover {
+  background-color: rgb(224, 40, 40);
+  cursor: pointer;
+}
+
+::-webkit-input-placeholder {
+  font-size: 16px;
+}
+::-moz-placeholder {
+  font-size: 16px;
+}
+:-ms-input-placeholder {
+  font-size: 16px;
+}
+::placeholder {
+  font-size: 16px;
+}
+
+footer {
+  line-height: 1;
+  box-sizing: border-box;
+  background-color: var(--main-color);
+  height: 4rem;
+  border-radius: 5px;
+  text-align: center;
+  padding-top: 0.2rem;
+}

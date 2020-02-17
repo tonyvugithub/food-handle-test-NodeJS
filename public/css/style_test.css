@@ -1,0 +1,362 @@
+/*Set the global properties*/
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+  background-color: rgb(247, 243, 243);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+/*Set the min width for the body wrapper*/
+body #wrapper {
+  height: 100%;
+  max-width: 960px;
+  min-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+li {
+  list-style: none;
+}
+
+li a {
+  text-decoration: none;
+  color: black;
+}
+/*Overflow help keep the two div inline with the nav element*/
+.nav {
+  background-color: #ffffff;
+  color: #000000;
+  overflow: hidden;
+  border-bottom: 1px solid gray;
+  height: auto;
+  text-align: center;
+}
+
+/*Remove the dot symbol of list and set margin to 0*/
+.level-1 {
+  margin: 0;
+  font-size: 20px;
+  padding: 10px 0 10px 0;
+}
+
+/*Display the list item on 1 line (in line)*/
+.level-1 li {
+  display: inline;
+  padding: 10px 0px;
+  margin: 0px 20px;
+}
+
+/*Remove the underline of the link for the nav bar*/
+.level-1 li a {
+  color: #000000;
+  padding: 8px 0;
+}
+
+.level-1 li a.active {
+  color: grey;
+  border-bottom: 3px solid black;
+}
+
+.level-1 li a:hover {
+  color: grey;
+  border-bottom: 3px solid black;
+}
+
+/*logo*/
+.logo {
+  padding: 10px 0 0 20px;
+}
+
+/*Remove the underline of the link for the LOGO*/
+.logo a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/*Add a banner photo auto adjust according to browser size*/
+.banner .banner-image {
+  width: 100%;
+  height: 250px;
+  display: block;
+}
+
+main {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 100px;
+  text-align: left;
+  padding: 10px;
+  border: thin solid rgb(206, 206, 206);
+  box-shadow: 3px 3px 4px #393e46;
+  background-color: #f9f6f7;
+}
+
+#progress-bar {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#progress-bar div {
+  width: 15px;
+  height: 15px;
+  border: thin solid black;
+  margin: 0 5px;
+  display: inline-block;
+  border-radius: 50%;
+  text-align: center;
+  font-size: small;
+}
+
+#question {
+  margin: 5px 0;
+  padding-bottom: 20px;
+  border-bottom: 2px groove rgb(206, 206, 206);
+  color: #0003a1;
+  font-size: 1.7em;
+  font-weight: bolder;
+}
+#answer-list {
+  margin-top: 15px;
+  color: #393e46;
+}
+.answer-item {
+  font-size: 1.2em;
+  cursor: pointer;
+  display: flex;
+  margin: 5px 0;
+  padding: 5px 0 5px 5px;
+  border-radius: 5px;
+}
+
+.answer-item i {
+  padding-left: 3px;
+}
+
+.answer-item * {
+  display: inline;
+}
+
+.answer-item:hover {
+  font-weight: bolder;
+  color: #4a4dff;
+  border-radius: 5px;
+  background-color: #ececf1;
+}
+
+.noclick {
+  pointer-events: none;
+}
+
+/*Validation message and next button*/
+#question-bottom {
+  margin-top: 20px;
+}
+
+#question-bottom div {
+  display: inline-block;
+}
+
+#prompt-message {
+  padding: 5px;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+#next-btn {
+  float: right;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 1.5em;
+  color: #0003a1;
+  font-weight: bolder;
+}
+
+#start-btn {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.correct {
+  color: #339933;
+  font-weight: bolder;
+}
+
+.correct-ball {
+  background-color: #339933;
+  color: #f9f6f7;
+}
+
+.incorrect {
+  color: #ff0000;
+  text-decoration: line-through #ff0000;
+  font-weight: bolder;
+}
+
+.incorrect-ball {
+  background-color: #ff0000;
+  color: #f9f6f7;
+}
+
+.hide {
+  display: none;
+}
+
+/*Score*/
+#get-score-btn {
+  text-align: center;
+}
+#get-score-btn button {
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid transparent;
+  margin: 0 auto;
+  margin-top: 20px;
+  cursor: pointer;
+  background-color: #0003a1;
+  text-transform: uppercase;
+  color: #f9f6f7;
+  font-weight: bolder;
+}
+#get-score-btn button:hover {
+  box-shadow: 2px 2px 4px #393e46;
+}
+
+#result {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/*Redo test*/
+#redo {
+  text-align: center;
+}
+#redo button {
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid transparent;
+  margin-top: 20px;
+  background-color: #0003a1;
+  text-transform: uppercase;
+  color: #f9f6f7;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+#redo button:hover {
+  box-shadow: 2px 2px 4px #393e46;
+}
+
+/* CSS */
+
+ul.nav {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  border-radius: 5px;
+
+  background-color: var(--main-color);
+}
+
+ul.nav li {
+  padding: 0.4rem;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.6rem;
+  display: inline-block;
+  flex: 1;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.icon {
+  width: 100px;
+  height: 100px;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.title > p {
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+
+.emphasis {
+  font-weight: bold;
+  color: var(--main-color);
+}
+
+.title .emphasis {
+  font-size: 3rem;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+a:visited {
+  color: black;
+}
+
+li a {
+  color: #fff;
+}
+
+li a:visited {
+  color: #fff;
+}
+
+nav li:hover {
+  background-color: var(--sub-violet);
+}
+
+:root {
+  /* for rem unit */
+  font-size: 1em;
+  /* Declaring custom properties */
+  --main-color: #83d0f2;
+  --sub-violet: #7a90f9;
+  --sub-blue: #6b9cdb;
+  --sub-green: #6bd7db;
+  --sub-aquamarine: #7af9da;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.6;
+}
+
+footer {
+  line-height: 1;
+  box-sizing: border-box;
+  background-color: var(--main-color);
+  height: 4rem;
+  border-radius: 5px;
+  text-align: center;
+  padding-top: 0.2rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+/* End */

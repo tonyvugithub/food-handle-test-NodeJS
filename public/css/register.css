@@ -1,0 +1,151 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+#container {
+  display: flex;
+  width: 800px;
+  margin: 0 auto;
+}
+
+#location-list {
+  flex: 1;
+  display: grid;
+  /* Added by Andrew */
+  height: 500px;
+  overflow-y: scroll;
+}
+
+#location-list div {
+  margin-bottom: 20px;
+  padding: 1rem;
+  /* Added by Andrew */
+
+}
+
+
+#map {
+  height: 500px;
+  flex: 2;
+}
+
+/* Added by Andrew */
+#location-list div p {
+  margin-bottom: 0.5rem;
+}
+
+#location-list div p:first-child {
+  font-weight: bold;
+}
+
+#location-list div a {
+  background-color: var(--main-color);
+  padding: 0.3rem;
+}
+
+#location-list div a:hover {
+  background-color: var(--sub-violet);
+  color: white;
+}
+
+ul.nav {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  border-radius: 5px;
+
+  background-color: var(--main-color);
+}
+
+ul.nav li {
+  padding: .4rem;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.6rem;
+  display: inline-block;
+  flex: 1;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.icon {
+  width: 100px;
+  height: 100px;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.title>p {
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+
+.emphasis {
+  font-weight: bold;
+  color: var(--main-color);
+}
+
+.title .emphasis {
+  font-size: 3rem;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+a:visited {
+  color: black;
+}
+
+li a {
+  color: #fff;
+}
+
+li a:visited {
+  color: #fff
+}
+
+nav li:hover {
+  background-color: var(--sub-violet);
+}
+
+:root {
+  /* for rem unit */
+  font-size: 1em;
+  /* Declaring custom properties */
+  --main-color: #83d0f2;
+  --sub-violet: #7A90F9;
+  --sub-blue: #6B9CDB;
+  --sub-green: #6BD7DB;
+  --sub-aquamarine: #7AF9DA;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+}
+
+footer {
+  line-height: 1;
+  box-sizing: border-box;
+  background-color: var(--main-color);
+  height: 4rem;
+  border-radius: 5px;
+  text-align: center;
+  padding-top: 0.2rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+/* End */
